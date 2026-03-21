@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Themediaguru — Content Operations SOP</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:'IBM Plex Sans',sans-serif;background:#F8F6F2;color:#1C1915;padding:48px;min-height:100vh}.doc{max-width:960px;margin:0 auto;background:#fff;border:1px solid #E4DDD4;border-radius:4px;overflow:hidden}.cover{background:#1C1915;color:#F8F6F2;padding:56px 60px;position:relative;overflow:hidden}.cover::after{content:'SOP';position:absolute;right:-20px;bottom:-40px;font-size:180px;font-weight:700;opacity:.04;letter-spacing:-.05em}.cover-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:48px}.company-mark{display:inline-flex;align-items:center;gap:10px;font-size:.78rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(248,246,242,.5)}.company-mark::before{content:'';width:24px;height:2px;background:#C8A96E}.doc-id{font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:rgba(248,246,242,.4);text-align:right}.doc-id div+div{margin-top:4px}.cover-category{font-size:.72rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#C8A96E;margin-bottom:16px}.cover-title{font-size:2.6rem;font-weight:700;letter-spacing:-.02em;line-height:1.1;margin-bottom:12px}.cover-sub{font-size:.95rem;color:rgba(248,246,242,.5);max-width:480px;margin-bottom:40px;line-height:1.6}.cover-meta{display:flex;gap:40px}.cm-label{font-size:.65rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(248,246,242,.35);margin-bottom:4px}.cm-val{font-size:.9rem;font-weight:500;color:rgba(248,246,242,.8)}.toc{background:#F0EDE7;padding:32px 60px;border-bottom:2px solid #E4DDD4}.toc-title{font-size:.68rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#9E9080;margin-bottom:16px}.toc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:6px}.toc-item{display:flex;align-items:center;gap:10px;font-size:.82rem;color:#3A352C;padding:4px 0}.toc-num{font-family:'IBM Plex Mono',monospace;font-size:.7rem;color:#C8A96E;min-width:24px;font-weight:500}.toc-dots{flex:1;border-bottom:1px dotted #C8BFB2;margin:0 4px}.toc-pg{font-family:'IBM Plex Mono',monospace;font-size:.7rem;color:#9E9080}.body{padding:48px 60px}.sop-section{margin-bottom:48px}.sec-header{display:flex;align-items:flex-start;gap:16px;margin-bottom:24px;padding-bottom:16px;border-bottom:2px solid #E4DDD4}.sec-num{font-family:'IBM Plex Mono',monospace;font-size:.82rem;font-weight:500;color:#C8A96E;min-width:32px;padding-top:2px}.sec-title{font-size:1.15rem;font-weight:700;letter-spacing:-.01em;margin-bottom:3px}.sec-purpose{font-size:.8rem;color:#9E9080;font-style:italic}.info-box{background:#F8F6F2;border-left:3px solid #C8A96E;padding:16px 20px;margin-bottom:20px;border-radius:0 4px 4px 0}.info-box-label{font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#C8A96E;margin-bottom:6px}.info-box p{font-size:.85rem;color:#3A352C;line-height:1.6}.step-flow{display:flex;flex-direction:column;gap:0}.step{display:flex;gap:0;position:relative}.step:not(:last-child)::after{content:'';position:absolute;left:18px;top:40px;bottom:0;width:2px;background:#E4DDD4;z-index:0}.step-left{display:flex;flex-direction:column;align-items:center;padding-right:20px;z-index:1;padding-top:8px}.step-circle{width:36px;height:36px;border-radius:50%;background:#1C1915;color:#F8F6F2;display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:.78rem;font-weight:500;flex-shrink:0}.step-right{padding-bottom:28px;flex:1}.step-title{font-size:.9rem;font-weight:700;margin-bottom:6px;color:#1C1915}.step-desc{font-size:.82rem;color:#5A5245;line-height:1.7;margin-bottom:10px}.step-details{display:flex;flex-direction:column;gap:4px}.step-detail{display:flex;gap:8px;font-size:.78rem;color:#5A5245}.step-detail::before{content:'→';color:#C8A96E;flex-shrink:0}.step-tools{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}.s-tool{font-size:.65rem;font-weight:600;letter-spacing:.06em;padding:3px 10px;background:#F0EDE7;color:#3A352C;border-radius:3px;border:1px solid #E4DDD4}.kpi-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px}.kpi-box{background:#F8F6F2;border:1px solid #E4DDD4;border-radius:6px;padding:16px;text-align:center}.kpi-box-label{font-size:.65rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#9E9080;margin-bottom:6px;font-family:'IBM Plex Mono',monospace}.kpi-box-val{font-size:1.3rem;font-weight:700;color:#C8A96E}.kpi-box-note{font-size:.68rem;color:#9E9080;margin-top:3px}.raci-table{width:100%;border-collapse:collapse}.raci-table th{font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#9E9080;padding:10px 14px;background:#F8F6F2;border:1px solid #E4DDD4;text-align:center;font-family:'IBM Plex Mono',monospace}.raci-table th:first-child{text-align:left}.raci-table td{padding:10px 14px;border:1px solid #E4DDD4;font-size:.8rem;color:#3A352C;vertical-align:middle}.raci-table td:not(:first-child){text-align:center}.raci-r{font-weight:700;color:#DC2626}.raci-a{font-weight:700;color:#D97706}.raci-c{font-weight:700;color:#2563EB}.raci-i{color:#9E9080}.checklist{display:flex;flex-direction:column;gap:6px}.check-item{display:flex;align-items:flex-start;gap:12px;padding:10px 14px;background:#F8F6F2;border-radius:4px;border:1px solid #E4DDD4}.check-box{width:18px;height:18px;border-radius:3px;border:2px solid #C8A96E;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}.check-box.checked{background:#C8A96E;border-color:#C8A96E}.check-box.checked::after{content:'✓';font-size:.6rem;color:#fff;font-weight:700}.check-text{font-size:.82rem;color:#3A352C;line-height:1.5}.check-text strong{font-weight:600;color:#1C1915}.doc-footer{background:#F0EDE7;padding:20px 60px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid #E4DDD4}.doc-footer-text{font-family:'IBM Plex Mono',monospace;font-size:.68rem;color:#9E9080}.confidential{background:#1C1915;color:#C8A96E;padding:4px 12px;border-radius:3px;font-size:.65rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;font-family:'IBM Plex Mono',monospace}
+</style>
+</head>
+<body>
+<div class="doc">
+  <div class="cover">
+    <div class="cover-top">
+      <div class="company-mark">Themediaguru Digital Agency</div>
+      <div class="doc-id"><div>DOC-SOP-003</div><div>Version 2.4</div><div>Last Rev: Nov 2023</div></div>
+    </div>
+    <div class="cover-category">Standard Operating Procedure</div>
+    <div class="cover-title">Content Production<br>& Client Delivery</div>
+    <div class="cover-sub">End-to-end process for producing, approving, and delivering content for all agency clients — from brief to publish.</div>
+    <div class="cover-meta">
+      <div class="cm-item"><div class="cm-label">Authored by</div><div class="cm-val">Chibueze Joshua, COO & Creative Dir.</div></div>
+      <div class="cm-item"><div class="cm-label">Applies to</div><div class="cm-val">All Content & Social Media Teams</div></div>
+      <div class="cm-item"><div class="cm-label">Review Cycle</div><div class="cm-val">Quarterly</div></div>
+    </div>
+  </div>
+  <div class="toc">
+    <div class="toc-title">Table of Contents</div>
+    <div class="toc-grid">
+      <div class="toc-item"><span class="toc-num">1.0</span>Purpose & Scope<span class="toc-dots"></span><span class="toc-pg">02</span></div>
+      <div class="toc-item"><span class="toc-num">3.0</span>Content Production Workflow<span class="toc-dots"></span><span class="toc-pg">03</span></div>
+      <div class="toc-item"><span class="toc-num">4.0</span>Quality Assurance Process<span class="toc-dots"></span><span class="toc-pg">04</span></div>
+      <div class="toc-item"><span class="toc-num">7.0</span>RACI Matrix<span class="toc-dots"></span><span class="toc-pg">05</span></div>
+    </div>
+  </div>
+  <div class="body">
+    <div class="sop-section">
+      <div class="sec-header"><div class="sec-num">1.0</div><div class="sec-title-block"><div class="sec-title">Purpose & Scope</div><div class="sec-purpose">Why this document exists and who it applies to</div></div></div>
+      <div class="info-box"><div class="info-box-label">Purpose</div><p>This SOP defines the standard process for content production at Themediaguru. It ensures consistent quality, clear accountability, and timely delivery for all 20+ client accounts.</p></div>
+      <div class="kpi-strip">
+        <div class="kpi-box"><div class="kpi-box-label">Clients Served</div><div class="kpi-box-val">20+</div><div class="kpi-box-note">Active accounts</div></div>
+        <div class="kpi-box"><div class="kpi-box-label">Avg Turnaround</div><div class="kpi-box-val">48 hrs</div><div class="kpi-box-note">Brief to delivery</div></div>
+        <div class="kpi-box"><div class="kpi-box-label">Approval Rate</div><div class="kpi-box-val">94%</div><div class="kpi-box-note">First-draft approval</div></div>
+        <div class="kpi-box"><div class="kpi-box-label">Students Trained</div><div class="kpi-box-val">1,000+</div><div class="kpi-box-note">On this process</div></div>
+      </div>
+    </div>
+    <div class="sop-section">
+      <div class="sec-header"><div class="sec-num">3.0</div><div class="sec-title-block"><div class="sec-title">Content Production Workflow</div><div class="sec-purpose">Step-by-step process from brief to first draft</div></div></div>
+      <div class="step-flow">
+        <div class="step"><div class="step-left"><div class="step-circle">01</div></div><div class="step-right"><div class="step-title">Client Brief Received</div><div class="step-desc">Client submits a completed brief via the standard intake form. Account manager reviews and flags any missing information within 2 hours.</div><div class="step-details"><div class="step-detail">Brief must include: brand voice, target audience, platform, and CTA</div><div class="step-detail">Content assigned to writer within 2 hours of receipt</div></div><div class="step-tools"><span class="s-tool">Notion</span><span class="s-tool">Google Forms</span><span class="s-tool">Slack</span></div></div></div>
+        <div class="step"><div class="step-left"><div class="step-circle">02</div></div><div class="step-right"><div class="step-title">Research & Strategy</div><div class="step-desc">Writer reviews brand guidelines, past content, competitor landscape, and trending topics before writing.</div><div class="step-details"><div class="step-detail">Review brand style guide stored in Notion</div><div class="step-detail">Identify 3–5 relevant trends or angles before drafting</div></div><div class="step-tools"><span class="s-tool">Notion</span><span class="s-tool">Google Trends</span><span class="s-tool">Meta Business Suite</span></div></div></div>
+        <div class="step"><div class="step-left"><div class="step-circle">03</div></div><div class="step-right"><div class="step-title">Draft Creation</div><div class="step-desc">Writer produces first draft following the brand voice guide. Draft includes copy, caption, hashtag recommendations, and visual direction notes.</div><div class="step-tools"><span class="s-tool">Google Docs</span><span class="s-tool">Canva</span><span class="s-tool">Notion</span></div></div></div>
+        <div class="step"><div class="step-left"><div class="step-circle">04</div></div><div class="step-right"><div class="step-title">Internal Quality Review</div><div class="step-desc">Senior editor reviews draft against brand guidelines, grammar, tone, and strategic alignment. Completed within 4 hours.</div><div class="step-tools"><span class="s-tool">Grammarly</span><span class="s-tool">Google Docs</span></div></div></div>
+        <div class="step"><div class="step-left"><div class="step-circle">05</div></div><div class="step-right"><div class="step-title">Client Submission & Approval</div><div class="step-desc">Approved draft sent to client via shared content calendar. Client has 24 hours to approve or request changes.</div><div class="step-tools"><span class="s-tool">Google Drive</span><span class="s-tool">Later.com</span><span class="s-tool">Slack</span></div></div></div>
+        <div class="step"><div class="step-left"><div class="step-circle">06</div></div><div class="step-right"><div class="step-title">Publish & Report</div><div class="step-desc">Once approved, content is scheduled. Performance data captured at 24h, 72h, and 7-day marks.</div><div class="step-tools"><span class="s-tool">Buffer</span><span class="s-tool">Meta Business</span><span class="s-tool">Google Analytics</span></div></div></div>
+      </div>
+    </div>
+    <div class="sop-section">
+      <div class="sec-header"><div class="sec-num">7.0</div><div class="sec-title-block"><div class="sec-title">RACI Matrix</div><div class="sec-purpose">R=Responsible · A=Accountable · C=Consulted · I=Informed</div></div></div>
+      <table class="raci-table">
+        <thead><tr><th style="text-align:left">TASK</th><th>COO</th><th>Account Mgr</th><th>Writer</th><th>Editor</th><th>Designer</th></tr></thead>
+        <tbody>
+          <tr><td>Brief Intake</td><td class="raci-a">A</td><td class="raci-r">R</td><td class="raci-i">I</td><td class="raci-i">I</td><td class="raci-i">I</td></tr>
+          <tr><td>Research & Strategy</td><td class="raci-c">C</td><td class="raci-a">A</td><td class="raci-r">R</td><td class="raci-c">C</td><td class="raci-i">I</td></tr>
+          <tr><td>Draft Creation</td><td class="raci-i">I</td><td class="raci-a">A</td><td class="raci-r">R</td><td class="raci-c">C</td><td class="raci-c">C</td></tr>
+          <tr><td>Internal QA Review</td><td class="raci-a">A</td><td class="raci-i">I</td><td class="raci-c">C</td><td class="raci-r">R</td><td class="raci-i">I</td></tr>
+          <tr><td>Client Submission</td><td class="raci-c">C</td><td class="raci-r">R</td><td class="raci-i">I</td><td class="raci-a">A</td><td class="raci-i">I</td></tr>
+          <tr><td>Publishing</td><td class="raci-a">A</td><td class="raci-r">R</td><td class="raci-i">I</td><td class="raci-i">I</td><td class="raci-i">I</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="sop-section">
+      <div class="sec-header"><div class="sec-num">4.0</div><div class="sec-title-block"><div class="sec-title">QA Checklist — Before Client Submission</div><div class="sec-purpose">Every piece of content must pass this checklist</div></div></div>
+      <div class="checklist">
+        <div class="check-item"><div class="check-box checked"></div><div class="check-text"><strong>Brand Voice:</strong> Copy matches the client's approved tone and style guide</div></div>
+        <div class="check-item"><div class="check-box checked"></div><div class="check-text"><strong>Hook:</strong> First sentence is compelling enough to stop a scroll</div></div>
+        <div class="check-item"><div class="check-box checked"></div><div class="check-text"><strong>CTA:</strong> Clear call-to-action aligned with campaign objective</div></div>
+        <div class="check-item"><div class="check-box checked"></div><div class="check-text"><strong>Grammar & Spelling:</strong> Proofread with Grammarly Premium; zero errors allowed</div></div>
+        <div class="check-item"><div class="check-box checked"></div><div class="check-text"><strong>Platform Optimised:</strong> Format, length, and hashtags appropriate for the platform</div></div>
+        <div class="check-item"><div class="check-box"></div><div class="check-text"><strong>Links/Tags:</strong> All hyperlinks, profile tags, and mentions are verified and active</div></div>
+        <div class="check-item"><div class="check-box"></div><div class="check-text"><strong>Legal/Compliance:</strong> No copyright infringement or false claims</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="doc-footer">
+    <div class="doc-footer-text">DOC-SOP-003 · v2.4 · Themediaguru Digital Agency · © 2023</div>
+    <div class="doc-footer-text">Authored: Chibueze Joshua, COO</div>
+    <div class="confidential">INTERNAL USE ONLY</div>
+  </div>
+</div>
+</body>
+</html>
