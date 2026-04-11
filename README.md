@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="assets/favicon.svg" alt="Portfolio Logo" width="100"/>
+</div>
+
 # Chibueze Joshua — Portfolio
 
 Welcome to the personal portfolio repository for **Chibueze Joshua**, an experienced **Operations, Project & Product Manager**. This portfolio highlights Joshua's career, key metrics, case studies, and extensive full-stack expertise ranging from operations to product strategy and business development.
