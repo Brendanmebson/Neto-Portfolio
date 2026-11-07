@@ -164,6 +164,31 @@ h1.hero-title em{font-style:italic;color:var(--accent-dark)}
 .results-list li{display:flex;gap:12px;font-size:.9375rem;color:var(--ink-soft);line-height:1.55}
 .results-list li::before{content:'';flex:none;width:12px;height:1px;background:var(--accent-dark);margin-top:.8em}
 
+/* LOGO TILES */
+.logo-tile{width:48px;height:48px;flex:none;border-radius:4px;overflow:hidden;border:1px solid var(--border);background:var(--white);display:grid;place-items:center}
+.logo-tile img{width:100%;height:100%;object-fit:cover;display:block}
+.logo-tile--contain img{object-fit:contain}
+.logo-tile--navy{background:#000E4B;border-color:#000E4B}
+.logo-tile--black{background:#010101;border-color:#010101}
+.logo-tile img[src$="brand-2.png"]{transform:scale(1.6)}
+.logo-tile img[src$="brand-3.png"]{transform:scale(1.25)}
+.logo-tile img[src$="brand-5.png"]{transform:scale(1.6)}
+.logo-tile img[src$="brand-1.png"]{transform:scale(1.1)}
+.logo-tile .mono{font-family:var(--serif);font-size:1.5rem;font-weight:500;line-height:1;color:var(--accent-ink)}
+.logo-tile--mono{background:var(--accent-muted);border-color:transparent}
+.case-meta .logo-tile{width:56px;height:56px;margin-bottom:24px;border-color:var(--line-dark)}
+.case-meta .logo-tile--mono{background:rgba(200,169,110,.14)}
+.case-meta .logo-tile--mono .mono{color:var(--accent);font-size:1.75rem}
+
+/* CASE PREVIEW */
+.case-preview{display:block;text-decoration:none;color:inherit}
+.case-preview-frame{position:relative;aspect-ratio:16/7;overflow:hidden;border:1px solid var(--border);border-radius:4px;background:var(--ink)}
+.case-preview-frame iframe{position:absolute;top:0;left:0;width:200%;height:200%;transform:scale(.5);transform-origin:top left;border:0;pointer-events:none}
+.case-preview-cap{display:flex;justify-content:space-between;gap:16px;margin-top:8px;font-size:.8125rem;color:var(--muted)}
+.case-preview-cap b{font-weight:500;color:var(--accent-ink);white-space:nowrap}
+.case-preview:hover .case-preview-frame{border-color:var(--stone-light)}
+.case-preview:hover .case-preview-cap b{text-decoration:underline;text-underline-offset:3px}
+
 /* WORK SAMPLES */
 #work-samples{background:var(--white)}
 .work-samples-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px}
@@ -183,6 +208,7 @@ h1.hero-title em{font-style:italic;color:var(--accent-dark)}
 #experience{background:var(--cream)}
 .exp-list{display:flex;flex-direction:column;border-top:1px solid var(--border)}
 .exp-item{display:grid;grid-template-columns:240px minmax(0,1fr);gap:48px;padding:36px 0;border-bottom:1px solid var(--border)}
+.exp-meta{display:flex;gap:16px;align-items:flex-start}
 .exp-period{font-size:.875rem;color:var(--accent-ink);margin-bottom:8px;font-variant-numeric:lining-nums tabular-nums}
 .exp-company{font-family:var(--serif);font-size:1.5rem;font-weight:500;line-height:1.15;margin-bottom:4px}
 .exp-industry{font-size:.875rem;color:var(--muted)}
@@ -262,11 +288,6 @@ a.coffee-btn:hover{color:#111;transform:translate(-1px,-1px);box-shadow:4px 4px 
 a.coffee-btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 #111}
 a.coffee-btn:focus-visible{outline:3px solid #D13506;outline-offset:2px}
 @media (prefers-reduced-motion:reduce){a.coffee-btn{transition:none}}
-/* undo the generic nav link styles for the button inside the nav */
-.nav-links li a.coffee-btn{display:inline-flex;padding:0 14px;font-size:13px;color:#111}
-.contact-support{margin-top:32px;display:flex;justify-content:center}
-/* desktop nav has no room for the button at these widths: it lives in the mobile menu below 900px */
-@media(min-width:901px) and (max-width:1199px){.nav-coffee{display:none}}
 
 /* ENTRANCE */
 @media (prefers-reduced-motion:no-preference){
@@ -290,12 +311,12 @@ a.coffee-btn:focus-visible{outline:3px solid #D13506;outline-offset:2px}
   .nav-links.open{display:flex}
   .nav-links li a{display:block;padding:12px 24px;font-size:1rem}
   .nav-links li a.nav-cta{display:flex;height:44px;margin:8px 24px 0;padding:0 16px}
-  .nav-coffee{padding:12px 24px}
   .hamburger{display:flex}
   section{padding-top:80px;padding-bottom:80px}
   #hero{min-height:auto;padding-top:112px;padding-bottom:72px}
   .case{grid-template-columns:1fr}
   .case-meta,.case-body{padding:28px 24px}
+  .case-preview-frame{aspect-ratio:16/10}
   .exp-item{grid-template-columns:1fr;gap:12px;padding:28px 0}
   .why-grid{grid-template-columns:1fr}
   .contact-grid{grid-template-columns:1fr}
@@ -325,14 +346,6 @@ a.coffee-btn:focus-visible{outline:3px solid #D13506;outline-offset:2px}
     <li><a href="#skills">Skills</a></li>
     <li><a href="#brands">Brands</a></li>
     <li><a href="#contact" class="nav-cta">Let's talk</a></li>
-    <li class="nav-coffee"><a class="coffee-btn" href="https://selar.com/showlove/brendan" target="_blank" rel="noopener">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <path d="M4 8h13v5a6 6 0 0 1-6 6h-1a6 6 0 0 1-6-6V8z"/>
-        <path d="M17 10h1.5a2.5 2.5 0 0 1 0 5H17"/>
-        <path d="M8 2.5c0 1 1 1.5 1 2.5M12 2.5c0 1 1 1.5 1 2.5"/>
-      </svg>
-      Buy Brendan a coffee
-    </a></li>
   </ul>
   <button class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu" aria-controls="navLinks">
     <span></span><span></span><span></span>
@@ -452,12 +465,17 @@ a.coffee-btn:focus-visible{outline:3px solid #D13506;outline-offset:2px}
     <article class="case">
       <div class="case-meta">
         <div>
+          <div class="logo-tile logo-tile--mono" aria-hidden="true"><span class="mono">N</span></div>
           <div class="tag">E-commerce · Nigeria</div>
           <h3>Naucentral: scaling to ₦10M in 5 months</h3>
         </div>
         <div class="role"><span>Role</span>PR and growth lead → Chief Operations Officer</div>
       </div>
       <div class="case-body">
+        <a class="case-preview" href="assets/sample-naucentral-dashboard.html" target="_blank" rel="noopener">
+          <div class="case-preview-frame"><iframe src="assets/sample-naucentral-dashboard.html" scrolling="no" tabindex="-1" aria-hidden="true" loading="lazy" title=""></iframe></div>
+          <span class="case-preview-cap"><span>Operations dashboard I ran, Aug – Dec 2023</span><b>Open ↗</b></span>
+        </a>
         <div class="case-challenge">
           <h4>The challenge</h4>
           <p>Naucentral had a solid product for Nigerian students but lacked operational structure, a clear marketing strategy, and the systems needed to scale quickly in a competitive market.</p>
@@ -478,6 +496,7 @@ a.coffee-btn:focus-visible{outline:3px solid #D13506;outline-offset:2px}
     <article class="case">
       <div class="case-meta">
         <div>
+          <div class="logo-tile logo-tile--black"><img src="assets/brand-3.png" alt="Pollenair logo" loading="lazy"></div>
           <div class="tag">EdTech · Gamification</div>
           <h3>Pollenair: solving the retention problem</h3>
         </div>
@@ -504,12 +523,17 @@ a.coffee-btn:focus-visible{outline:3px solid #D13506;outline-offset:2px}
     <article class="case">
       <div class="case-meta">
         <div>
+          <div class="logo-tile logo-tile--navy logo-tile--contain"><img src="assets/brand-2.png" alt="Apprelab logo" loading="lazy"></div>
           <div class="tag">EdTech · Marketplace · Africa</div>
           <h3>Apprelab: learning meets earning</h3>
         </div>
         <div class="role"><span>Role</span>Chief Operations Officer</div>
       </div>
       <div class="case-body">
+        <a class="case-preview" href="assets/sample-apprelab-roadmap.html" target="_blank" rel="noopener">
+          <div class="case-preview-frame"><iframe src="assets/sample-apprelab-roadmap.html" scrolling="no" tabindex="-1" aria-hidden="true" loading="lazy" title=""></iframe></div>
+          <span class="case-preview-cap"><span>Product roadmap 2024</span><b>Open ↗</b></span>
+        </a>
         <div class="case-challenge">
           <h4>The challenge</h4>
           <p>Building a two-sided marketplace that combines education with real freelance opportunities required strong operational execution on both sides at once.</p>
@@ -588,9 +612,12 @@ a.coffee-btn:focus-visible{outline:3px solid #D13506;outline-offset:2px}
 
     <div class="exp-item">
       <div class="exp-meta">
-        <div class="exp-period">Jan 2024 – present</div>
-        <div class="exp-company">Apprelab</div>
-        <div class="exp-industry">EdTech startup</div>
+        <div class="logo-tile logo-tile--navy logo-tile--contain"><img src="assets/brand-2.png" alt="Apprelab logo" loading="lazy"></div>
+        <div>
+          <div class="exp-period">Jan 2024 – present</div>
+          <div class="exp-company">Apprelab</div>
+          <div class="exp-industry">EdTech startup</div>
+        </div>
       </div>
       <div>
         <div class="exp-role">Chief Operations Officer</div>
@@ -601,9 +628,12 @@ a.coffee-btn:focus-visible{outline:3px solid #D13506;outline-offset:2px}
 
     <div class="exp-item">
       <div class="exp-meta">
-        <div class="exp-period">2025 – 2026</div>
-        <div class="exp-company">Pollenair</div>
-        <div class="exp-industry">Gamified EdTech startup</div>
+        <div class="logo-tile logo-tile--black"><img src="assets/brand-3.png" alt="Pollenair logo" loading="lazy"></div>
+        <div>
+          <div class="exp-period">2025 – 2026</div>
+          <div class="exp-company">Pollenair</div>
+          <div class="exp-industry">Gamified EdTech startup</div>
+        </div>
       </div>
       <div>
         <div class="exp-role">Chief Operations Officer</div>
@@ -614,9 +644,12 @@ a.coffee-btn:focus-visible{outline:3px solid #D13506;outline-offset:2px}
 
     <div class="exp-item">
       <div class="exp-meta">
-        <div class="exp-period">2023 – 2024</div>
-        <div class="exp-company">Naucentral</div>
-        <div class="exp-industry">E-commerce startup</div>
+        <div class="logo-tile logo-tile--mono" aria-hidden="true"><span class="mono">N</span></div>
+        <div>
+          <div class="exp-period">2023 – 2024</div>
+          <div class="exp-company">Naucentral</div>
+          <div class="exp-industry">E-commerce startup</div>
+        </div>
       </div>
       <div>
         <div class="exp-role">COO and PR/growth lead</div>
@@ -627,9 +660,12 @@ a.coffee-btn:focus-visible{outline:3px solid #D13506;outline-offset:2px}
 
     <div class="exp-item">
       <div class="exp-meta">
-        <div class="exp-period">2022 – 2023</div>
-        <div class="exp-company">Themediaguru</div>
-        <div class="exp-industry">Digital marketing agency</div>
+        <div class="logo-tile logo-tile--mono" aria-hidden="true"><span class="mono">T</span></div>
+        <div>
+          <div class="exp-period">2022 – 2023</div>
+          <div class="exp-company">Themediaguru</div>
+          <div class="exp-industry">Digital marketing agency</div>
+        </div>
       </div>
       <div>
         <div class="exp-role">COO and creative director</div>
@@ -640,9 +676,12 @@ a.coffee-btn:focus-visible{outline:3px solid #D13506;outline-offset:2px}
 
     <div class="exp-item">
       <div class="exp-meta">
-        <div class="exp-period">2024</div>
-        <div class="exp-company">Aluta Media</div>
-        <div class="exp-industry">News and digital marketing</div>
+        <div class="logo-tile "><img src="assets/brand-4.png" alt="Aluta News logo" loading="lazy"></div>
+        <div>
+          <div class="exp-period">2024</div>
+          <div class="exp-company">Aluta Media</div>
+          <div class="exp-industry">News and digital marketing</div>
+        </div>
       </div>
       <div>
         <div class="exp-role">Marketing lead and strategist</div>
@@ -653,9 +692,12 @@ a.coffee-btn:focus-visible{outline:3px solid #D13506;outline-offset:2px}
 
     <div class="exp-item">
       <div class="exp-meta">
-        <div class="exp-period">2025 – 2026</div>
-        <div class="exp-company">Foundair</div>
-        <div class="exp-industry">Startup accelerator</div>
+        <div class="logo-tile logo-tile--black"><img src="assets/brand-5.png" alt="Foundair logo" loading="lazy"></div>
+        <div>
+          <div class="exp-period">2025 – 2026</div>
+          <div class="exp-company">Foundair</div>
+          <div class="exp-industry">Startup accelerator</div>
+        </div>
       </div>
       <div>
         <div class="exp-role">Startup consultant</div>
@@ -666,9 +708,12 @@ a.coffee-btn:focus-visible{outline:3px solid #D13506;outline-offset:2px}
 
     <div class="exp-item">
       <div class="exp-meta">
-        <div class="exp-period">2022 – 2026</div>
-        <div class="exp-company">ResearchPedia</div>
-        <div class="exp-industry">Research services</div>
+        <div class="logo-tile "><img src="assets/brand-1.png" alt="ResearchPedia logo" loading="lazy"></div>
+        <div>
+          <div class="exp-period">2022 – 2026</div>
+          <div class="exp-company">ResearchPedia</div>
+          <div class="exp-industry">Research services</div>
+        </div>
       </div>
       <div>
         <div class="exp-role">Professional researcher</div>
@@ -679,9 +724,12 @@ a.coffee-btn:focus-visible{outline:3px solid #D13506;outline-offset:2px}
 
     <div class="exp-item">
       <div class="exp-meta">
-        <div class="exp-period">2018 – 2020</div>
-        <div class="exp-company">Freelance</div>
-        <div class="exp-industry">Writing and social media</div>
+        <div class="logo-tile logo-tile--mono" aria-hidden="true"><span class="mono">F</span></div>
+        <div>
+          <div class="exp-period">2018 – 2020</div>
+          <div class="exp-company">Freelance</div>
+          <div class="exp-industry">Writing and social media</div>
+        </div>
       </div>
       <div>
         <div class="exp-role">Copywriter and social media strategist</div>
@@ -810,11 +858,11 @@ a.coffee-btn:focus-visible{outline:3px solid #D13506;outline-offset:2px}
   <h2 class="section-title">Brands I've worked with</h2>
   <p class="section-desc">Startups, agencies and companies I've helped build, scale and operate.</p>
   <div class="upload-grid">
-    <div class="brand-logo-slot"><img src="assets/brand-1.png" alt="Partner brand logo" loading="lazy"></div>
-    <div class="brand-logo-slot"><img src="assets/brand-2.png" alt="Partner brand logo" loading="lazy"></div>
-    <div class="brand-logo-slot"><img src="assets/brand-3.png" alt="Partner brand logo" loading="lazy"></div>
-    <div class="brand-logo-slot"><img src="assets/brand-4.png" alt="Partner brand logo" loading="lazy"></div>
-    <div class="brand-logo-slot"><img src="assets/brand-5.png" alt="Partner brand logo" loading="lazy"></div>
+    <div class="brand-logo-slot"><img src="assets/brand-1.png" alt="ResearchPedia logo" loading="lazy"></div>
+    <div class="brand-logo-slot"><img src="assets/brand-2.png" alt="Apprelab logo" loading="lazy"></div>
+    <div class="brand-logo-slot"><img src="assets/brand-3.png" alt="Pollenair logo" loading="lazy"></div>
+    <div class="brand-logo-slot"><img src="assets/brand-4.png" alt="Aluta News logo" loading="lazy"></div>
+    <div class="brand-logo-slot"><img src="assets/brand-5.png" alt="Foundair logo" loading="lazy"></div>
   </div>
 
   <!-- TOOLS -->
@@ -904,16 +952,6 @@ a.coffee-btn:focus-visible{outline:3px solid #D13506;outline-offset:2px}
     <a href="assets/Chibueze_Joshua_CV_.pdf" download class="btn btn-outline">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
       Download resume
-    </a>
-  </div>
-  <div class="contact-support">
-    <a class="coffee-btn" href="https://selar.com/showlove/brendan" target="_blank" rel="noopener">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <path d="M4 8h13v5a6 6 0 0 1-6 6h-1a6 6 0 0 1-6-6V8z"/>
-        <path d="M17 10h1.5a2.5 2.5 0 0 1 0 5H17"/>
-        <path d="M8 2.5c0 1 1 1.5 1 2.5M12 2.5c0 1 1 1.5 1 2.5"/>
-      </svg>
-      Buy Brendan a coffee
     </a>
   </div>
 </section>
